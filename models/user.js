@@ -14,6 +14,22 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    phone: {
+      type: String,
+      required : true,
+    },
+    bank: {
+      type: String,
+      required : true,
+    },
+    accoutbank: {
+      type: String,
+      required : true,
+    },
+    createdAt: {
+      type: String,
+      required : true,
+    }
   },
   { timestamps: true }
 );

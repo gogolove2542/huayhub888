@@ -1,27 +1,28 @@
 "use client";
 
-import { signOut } from "next-auth/react";
 import { useSession } from "next-auth/react";
+import * as React from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import Card from '@mui/material/Card';
+import { Typography } from "@mui/material";
 
-export default function UserInfo() {
+export default function SimpleContainer() {
   const { data: session } = useSession();
-
   return (
-    <div className="grid place-items-center h-screen">
-      <div className="shadow-lg p-8 bg-zince-300/10 flex flex-col gap-2 my-6">
-        <div>
-          Name: <span className="font-bold">{session?.user?.name}</span>
-        </div>
-        <div>
-          Email: <span className="font-bold">{session?.user?.email}</span>
-        </div>
-        <button
-          onClick={() => signOut()}
-          className="bg-red-500 text-white font-bold px-6 py-2 mt-3"
-        >
-          Log Out
-        </button>
-      </div>
-    </div>
+    <>
+      <CssBaseline /> {/* ใส่ CssBaseline เพื่อรับสไตล์พื้นฐานของ Material-UI */}
+      <Container maxWidth="" sx={{ bgcolor: '#fff59d', height: '100vh' }}>
+        <Box display="flex" justifyContent="center" height="100vh">
+          <Card className="shadow-xl mt-3 p-6 w-3/6">
+            <Typography>
+              ยินดีต้อนรับเข้าสู่ Huay Hub 888 
+            </Typography>
+          </Card>
+        </Box>
+      </Container>
+
+    </>
   );
 }

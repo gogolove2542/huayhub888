@@ -1,9 +1,9 @@
-import UserInfo from "@/components/UserInfo";
 import Navbar from "@/components/Navbar";
+import Profile from "@/components/Profile";
 
 export default function Dashboard() {
   return <>
   <Navbar />
-  <UserInfo />
+  <Profile />
   </>
 }
